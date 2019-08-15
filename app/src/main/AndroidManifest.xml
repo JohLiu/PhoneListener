@@ -43,10 +43,15 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
             <!--<intent-filter android:priority="10000">-->
-                <!--<action android:name="android.intent.action.PHONE_STATE" />-->
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+            <!--<action android:name="android.intent.action.PHONE_STATE" />-->
+            <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
             <!--</intent-filter>-->
         </receiver>
+
+        <service
+            android:name=".PhoneListenService"
+            android:enabled="true"
+            android:exported="true" />
 
     </application>
 

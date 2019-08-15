@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnOpen;
     TextView tvDesc;
 
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
         getCanDrawOverlays();
 
-        btnOpen.setOnClickListener(view -> {
-            setCanDrawOverlays();
-        });
+        // 设置是否开启应用上层显示
+        btnOpen.setOnClickListener(view -> setCanDrawOverlays());
+
+        intent = new Intent(getApplicationContext(), PhoneListenService.class);
+        startService(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        stopService(intent);
     }
 
     /**

@@ -36,10 +36,10 @@ public class PhoneReceiver extends BroadcastReceiver {
                     if (!TextUtils.isEmpty(number)) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                             if (Settings.canDrawOverlays(mcontext)) {
-                                WindowsUtils.showPopupWindow(mcontext, "信息部-龚守辉\n" + number);
+                                WindowsUtils.showPopupWindow(mcontext, "移动开发部-Joh\n" + number);
                             }
                         } else {
-                            WindowsUtils.showPopupWindow(mcontext, "信息部-龚守辉\n" + number);
+                            WindowsUtils.showPopupWindow(mcontext, "移动开发部-Joh\n" + number);
                         }
                     }
                 });
