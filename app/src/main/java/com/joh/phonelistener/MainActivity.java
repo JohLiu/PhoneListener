@@ -1,17 +1,15 @@
 package com.joh.phonelistener;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.RequestExecutor;
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        stopService(intent);
+        stopService(intent);
     }
 
     /**

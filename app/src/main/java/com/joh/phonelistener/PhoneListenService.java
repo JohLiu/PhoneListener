@@ -9,7 +9,6 @@ import android.provider.Settings;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 /**
  * 来电监听服务
@@ -34,10 +33,10 @@ public class PhoneListenService extends Service {
             if (!TextUtils.isEmpty(number)) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (Settings.canDrawOverlays(getApplicationContext())) {
-                        WindowsUtils.showPopupWindow(getApplicationContext(), "\n\n移动开发部-Joh\n" + number);
+                        WindowsUtils.showPopupWindow(getApplicationContext(), "移动开发部-Joh\n" + number);
                     }
                 } else {
-                    WindowsUtils.showPopupWindow(getApplicationContext(), "\n\n移动开发部-Joh\n" + number);
+                    WindowsUtils.showPopupWindow(getApplicationContext(), "移动开发部-Joh\n" + number);
                 }
             }
         });
