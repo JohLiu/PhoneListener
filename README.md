@@ -144,6 +144,8 @@
     }
 ```
 设置悬浮窗展示页面，将悬浮窗封装一下可以随时使用
+> 系统级弹窗type，在8.0之前使用`TYPE_SYSTEM_ALERT`,但是8.0之后`TYPE_SYSTEM_ALERT`已经被舍弃，
+> 需要使用`TYPE_APPLICATION_OVERLAY`
 ```
 /**
  * 来电监听窗口工具类
